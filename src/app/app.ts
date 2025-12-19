@@ -15,7 +15,7 @@ export class App implements OnInit {
   textoMensaje = '';
   mensajes: any[] = [];
 
-  apiUrl = 'https://backend-actu.onrender.com';
+  apiUrl = 'backend_actu.railway.internal';
 
   constructor(private http: HttpClient) {}
 
