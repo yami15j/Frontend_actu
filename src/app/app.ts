@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -8,21 +8,18 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'] // corrige styleUrl → styleUrls
 })
-export class App {
-
-  oninit() {
-    this.cargarMensajes();
-  }
+export class App implements OnInit {
 
   textoMensaje = '';
   mensajes: any[] = [];
 
-  // 👉 URL REAL DEL BACKEND EN RENDER
   apiUrl = 'https://backend-actu.onrender.com/api/mensajes';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
     this.cargarMensajes();
   }
 

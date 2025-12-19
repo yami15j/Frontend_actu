@@ -1,19 +1,19 @@
-<div class="container">
-  <h1>Mini Muro de Mensajes</h1>
+  <div class="container">
+    <h1>Mini Muro de Mensajes</h1>
 
-  <div class="card">
-    <textarea
-      [(ngModel)]="textoMensaje"
-      placeholder="Escribe un mensaje..."
-    ></textarea>
+    <div class="card">
+      <textarea
+        [(ngModel)]="textoMensaje"
+        placeholder="Escribe un mensaje..."
+      ></textarea>
 
-    <button (click)="enviarMensaje()">Publicar</button>
-  </div>
+      <button (click)="enviarMensaje()">Publicar</button>
+    </div>
 
-  <div class="mensajes">
-    <div class="mensaje" *ngFor="let m of mensajes">
-      <p>{{ m.texto }}</p>
-      <small>{{ m.fecha | date:'short' }}</small>
+    <div class="mensajes">
+      <div class="mensaje" *ngFor="let m of mensajes">
+        <p>{{ m.texto }}</p>
+        <small>{{ m.fecha | date:'short' }}</small>
+      </div>
     </div>
   </div>
-</div>
