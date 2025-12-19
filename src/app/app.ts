@@ -12,6 +12,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class App {
 
+  oninit() {
+    this.cargarMensajes();
+  }
+
   textoMensaje = '';
   mensajes: any[] = [];
 
