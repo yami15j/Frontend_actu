@@ -15,7 +15,7 @@ export class App implements OnInit {
   textoMensaje = '';
   mensajes: any[] = [];
 
-  apiUrl = 'https://backend-actu.onrender.com/api/mensajes';
+  apiUrl = 'https://backend-actu.onrender.com';
 
   constructor(private http: HttpClient) {}
 
